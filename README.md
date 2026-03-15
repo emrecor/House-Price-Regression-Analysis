@@ -1,25 +1,34 @@
-# 🏠 House Prices: Advanced Regression Techniques (Kaggle)
+# House Price Prediction & Regression Analysis
 
-Bu proje, Kaggle'ın popüler "House Prices" yarışması için geliştirdiğim kapsamlı bir veri analizi ve makine öğrenmesi çalışmasıdır. Amacımız, evin çeşitli özelliklerini (metrekare, oda sayısı, konumu vb.) kullanarak satış fiyatını en düşük hata payıyla tahmin etmektir.
+This repository contains an end-to-end data science project focused on predicting residential home prices using advanced regression techniques. The project covers the entire pipeline, from comprehensive Exploratory Data Analysis (EDA) to hyperparameter optimization.
 
-## 📊 Proje Özeti
-- **Veri Seti:** 79 farklı değişken içeren konut özelliklerini kapsar.
-- **Hedef:** Evlerin satış fiyatlarını (SalePrice) tahmin etmek.
-- **Yöntemler:** Exploratory Data Analysis (EDA), Feature Engineering, Hyperparameter Optimization.
+## 📌 Project Overview
+The goal of this project is to predict the sales price of houses based on 79 explanatory variables. It demonstrates the application of modern machine learning algorithms and rigorous feature engineering to solve a high-dimensional regression problem.
 
-## 🛠️ Kullanılan Teknolojiler
-- **Kütüphaneler:** Pandas, NumPy, Scikit-learn, XGBoost, CatBoost.
-- **Optimizasyon:** Optuna (Hiperparametre tünelleme için).
-- **Görselleştirme:** Matplotlib, Seaborn.
+## 🛠️ Tech Stack & Tools
+- **Language:** Python
+- **Data Manipulation:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn, XGBoost, CatBoost
+- **Optimization:** Optuna (Bayesian Optimization)
+- **Statistical Analysis:** SciPy (Skewness/Kurtosis correction)
 
-## 🚀 Öne Çıkan Adımlar
-1. **Missing Value Management:** Eksik veriler, değişkenin türüne göre (mod, medyan veya 'None') dolduruldu.
-2. **Feature Engineering:** Sayısal değişkenlerin veri tipleri optimize edildi ve model için yeni özellikler oluşturuldu.
-3. **Modeling:** CatBoost ve XGBoost modelleri kullanılarak başarılı tahminleme yapıldı.
-4. **Optimization:** Optuna kütüphanesi ile modellerin parametreleri en iyi performansı verecek şekilde ayarlandı.
+## 🚀 Key Features of the Analysis
+- **Advanced Preprocessing:** - Systematic handling of missing values based on feature context.
+    - Log-transformation of the target variable to ensure normality and improve model stability.
+    - Encoding of categorical variables and feature scaling.
+- **Modeling Strategy:** - Implementation of high-performance Gradient Boosting algorithms: **XGBoost** and **CatBoost**.
+    - Cross-validation with **K-Fold** to ensure model robustness.
+- **Hyperparameter Tuning:** - Used **Optuna** for automated hyperparameter search, significantly reducing the Root Mean Squared Error (RMSE).
+- **Ensemble Approach:** - Weighted averaging of model predictions to achieve better generalization on unseen data.
 
-## 📈 Sonuçlar
-Notebook üzerinde yapılan çapraz doğrulama (cross-validation) sonuçlarına göre:
-- **CatBoost RMSE:** ~1.126
-- **XGBoost RMSE:** ~1.126
-*(Not: Logaritmik dönüşüm yapıldıysa bunu belirtin)*
+## 📊 Performance
+The models were evaluated using **RMSE** on log-transformed prices:
+- **CatBoost Average RMSE:** ~1.126
+- **XGBoost Average RMSE:** ~1.126
+
+## 📂 Project Structure
+```text
+├── notebooks/
+│   └── price_prediction_analysis.ipynb  # Main analysis and modeling notebook
+└── README.md                            # Project documentation
