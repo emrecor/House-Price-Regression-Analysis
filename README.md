@@ -29,6 +29,11 @@ The models were evaluated using **RMSE** on log-transformed prices:
 
 ## 📂 Project Structure
 ```text
+├── data/
+│   ├── data_description.txt
+│   ├── train.csv                # Data used to train your model
+│   ├── test.csv                 # Data to predict on (no target variable)
+│   └── sample_submission.csv    # Example format for final output
 ├── notebooks/
-│   └── price_prediction_analysis.ipynb  # Main analysis and modeling notebook
-└── README.md                            # Project documentation
+│   └── price_prediction_analysis.ipynb
+└── README.md
